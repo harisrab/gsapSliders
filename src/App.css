@@ -1,38 +1,139 @@
+li, ul {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
 .App {
-  text-align: center;
-}
+  height: 100vh;
+  width: 100vw;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-family:  Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.slider__box {
+
+  height: 500px;
+  width: 1200px;
+
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+
+  position: relative;
+}
+
+
+.arrow {
+
+  height: 100%;
+  width: 100px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  cursor: pointer;
+
+  transition: .1s ease-in;
 }
 
-.App-link {
-  color: #61dafb;
+.arrow:hover {
+  box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.arrow img {
+  height: 35px;
+}
+
+.content__box {
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+}
+
+.image__holder {
+  width: 319.44px;
+  height: 425.92px;
+
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  overflow: hidden;
+}
+
+.image__holder li {
+  text-decoration: none;
+  height: 425.92px;
+}
+
+.image__holder ul {
+  display: flex;
+  flex-direction: row;
+}
+.image__holder img {
+  width: 319.44px;
+  height: 425.92px;
+}
+
+.info__holder {
+
+  width: 595px;
+  height: 425.92px;
+
+  position: absolute;
+  bottom: 40px;
+  left: calc(319.44px + 100px) ;
+}
+
+.info__holder ul {
+  position: relative;
+  top: 100px;
+  
+}
+
+
+.info__holder li {
+  position: absolute;
+  opacity: 0;
+ 
+
+  
+}
+
+.info__quote {
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(80, 80, 80);
+}
+
+.info__name {
+  color: gray;
+  letter-spacing: 2px;
+  font-weight:400;
+}
+
+.info__designation {
+  color: gray;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+
+
+
+
+.circle {
+  height: 200px;
+  width: 200px;
+  background-color: rgba(253, 11, 11, 0.637);
+  border-radius: 50%;
+  position: absolute;
+  left: 30px;
+  top: -50px;
+
+  z-index: -1;
 }
